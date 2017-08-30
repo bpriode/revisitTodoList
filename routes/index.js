@@ -26,6 +26,7 @@ router.post("/", function (req, res) {
 router.post('/completed/:id', function(req, res) {
   models.todos.update({
     completed: true,
+    completedAt: Date.now()
   }, {
     where: {
       id: req.params.id

@@ -2,7 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
   var todos = sequelize.define('todos', {
     title: DataTypes.STRING,
-    completedAt: DataTypes.DATE
+    completed: DataTypes.BOOLEAN
   }, {
     classMethods: {
       associate: function(models) {
