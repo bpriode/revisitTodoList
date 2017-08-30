@@ -1,6 +1,6 @@
 <div class="add">
   <h2>Todo List</h2>
-  
+
   <h2 id="headline">Start your productive streak!</h2>
   <h3>Type in a todo and then click the task when you're finished. Let's do this!</h3>
     <form class="searchArea" action="/" method="post">
@@ -14,7 +14,7 @@
 {{#task}}
 {{^completed}}
 
-  <form class="" action="/" method="post">
+  <form class="" action="/completed/{{id}}" method="post">
    <input type="submit" name="button" value="{{title}}">
   </form>
 
