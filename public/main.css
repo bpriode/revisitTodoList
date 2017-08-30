@@ -63,10 +63,10 @@ h3{
 
 .listItems{
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 800px;
+  justify-content: space-around;
 }
+
+
 
 #check{
   width: 20px;
@@ -84,6 +84,10 @@ h3{
 .add{
   border: 2px dashed #20B2AA;
   padding-bottom: 15px;
-  width: 750px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 
 }

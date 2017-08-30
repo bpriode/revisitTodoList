@@ -1,5 +1,5 @@
 <div class="add">
-  <h2>Todo List</h2>
+
 
   <h2 id="headline">Start your productive streak!</h2>
   <h3>Type in a todo and then click the task when you're finished. Let's do this!</h3>
@@ -9,30 +9,33 @@
     </form>
 </div>
 
+<div class="listItems">
+  <div class="todo">
+    <h2>Todo List</h2>
+    {{#task}}
+    {{^completed}}
+        <form class="" action="/completed/{{id}}" method="post">
+         <input type="submit" name="button" value="{{title}}">
+         <a href="/destroy/{{id}}">Delete</a>
+         <a href="/edit/{{id}}">Edit</a>
+        </form>
+    {{/completed}}
+    {{/task}}
+  </div>
 
+  <div class="complete">
 
-{{#task}}
-{{^completed}}
+    <h2>You've worked so hard!</h2>
+    <h3>Look at all the things you've finished</h3>
+    {{#task}}
+    {{#completed}}
+      <form class="" action="/completed/{{id}}" method="post">
+        <input type="submit" name="button" value="{{title}}">
 
-  <form class="" action="/completed/{{id}}" method="post">
-   <input type="submit" name="button" value="{{title}}">
-  </form>
-
-  <a href="/destroy/{{id}}">Delete</a>
-  <a href="/edit/{{id}}">Edit</a>
-
-{{/completed}}
-{{/task}}
-
-
-
-
-<h2>You've worked so hard!</h2>
-<h3>Look at all the things you've finished</h3>
-{{#task}}
-{{#completed}}
-  <form class="" action="/completed/{{id}}" method="post">
-    <input type="submit" name="button" value="{{title}}">
-{{/completed}}
-{{/task}}
-  </form>
+        <a href="/destroy/{{id}}">Delete</a>
+        <a href="/edit/{{id}}">Edit</a>
+      </form>
+    {{/completed}}
+    {{/task}}
+    </div>
+</div>
