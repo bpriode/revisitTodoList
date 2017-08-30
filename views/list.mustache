@@ -1,0 +1,28 @@
+
+{{#task}}
+{{^completed}}
+
+  <form class="" action="/" method="post">
+   <input type="submit" name="button" value="{{title}}">
+  </form>
+
+  <a href="/destroy/{{id}}">Delete</a>
+  <a href="/edit/{{id}}">Edit</a>
+
+{{/completed}}
+{{/task}}
+
+
+
+<br>
+<br>
+
+<h2>You've worked so hard!</h2>
+<h3>Look at all the things you've finished</h3>
+{{#task}}
+{{#completed}}
+  <form class="" action="/completed/{{id}}" method="post">
+    <input type="submit" name="button" value="{{title}}">
+{{/completed}}
+{{/task}}
+  </form>
