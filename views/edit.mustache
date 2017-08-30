@@ -1,7 +1,12 @@
+<link rel="stylesheet" href="/main.css">
+<div class="add">
+
 {{#task}}
-<h1>Edit Task</h1>
+<h3 id='headline'>Edit Task</h3>
 <form class="" action="/edit/{{id}}" method="post">
-  <input type="text" name="task" placeholder="  Edit" value='{{title}}'>
+  <input id="search" type="text" name="task" placeholder="  Edit" value='{{title}}'>
   <input type="submit" name="" value="Edit">
 </form>
 {{/task}}
+
+</div>
